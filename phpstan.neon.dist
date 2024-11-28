@@ -1,0 +1,15 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+
+parameters:
+    level: 5
+    paths:
+        - src
+
+    checkMissingIterableValueType: true
+    reportUnmatchedIgnoredErrors: true
+
+    ignoreErrors:
+        - '#Call to an undefined method [a-zA-Z0-9\\_]+::enforcedUniqueColumns\(\)#'
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Builder<.*>::withTrashed\(\)#'
